@@ -9,7 +9,7 @@ cron = require('cron').CronJob
 
 
 module.exports = (robot) ->
-  new cron '0 40 10 * * 6', () =>
+  new cron '0 30 9 * * 6', () =>
 
     d1 = new Date "2016-04-06 00:00:00 +0900"
     msec = (new Date).getTime() - d1.getTime()
