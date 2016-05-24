@@ -7,5 +7,5 @@
 
 module.exports = (robot) ->
 
-  robot.hear /ショボ[ー\-]*ン|しょぼ[ー\-]*ん|shobo[\-]*n/, (res) ->
+  robot.hear /ショボ[ー\-]*ン|しょぼ[ー\-]*ん|shobo[\-]*n|\borz\b/, (res) ->
     res.send "(´・ω・`)しょぼ-ん"
