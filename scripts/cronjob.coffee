@@ -22,8 +22,13 @@ module.exports = (robot) ->
       "今日は#{assignment}の〆切日デスヨ。提出お忘れなく!"
   , null, true, 'Asia/Tokyo'
 
-  new cron '0 50-52 22 * * 5', () =>
-
-    robot.send { room: "#slack-sandbox" },
-      "ただいまcronのテスト中"
+  new cron '0 0 18 * * 2', () =>
+    robot.send { room: "#seminar-all" },
+      "@channel: 明日は輪講デスヨ。ご準備お願いシマス。(_\"_) ペコリ\n" +
+      "欠席の人はご連絡お願いシマス。"
   , null, true, 'Asia/Tokyo'
+
+#  new cron '0 50-52 22 * * 5', () =>
+#    robot.send { room: "#slack-sandbox" },
+#      "ただいまcronのテスト中"
+#  , null, true, 'Asia/Tokyo'
