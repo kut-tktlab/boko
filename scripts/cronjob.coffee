@@ -24,11 +24,11 @@ module.exports = (robot) ->
 
   new cron '0 0 18 * * 2', () =>
     robot.send { room: "#seminar-all" },
-      "@channel: 明日は輪講デスヨ。ご準備お願いシマス。(＿\"＿) ペコリ\n" +
+      "<!channel>: 明日は輪講デスヨ。ご準備お願いシマス。(＿\"＿) ペコリ\n" +
       "欠席の人はご連絡お願いシマス。"
   , null, true, 'Asia/Tokyo'
 
-#  new cron '0 50-52 22 * * 5', () =>
+#  new cron '0 3 19 * * 2', () =>
 #    robot.send { room: "#slack-sandbox" },
-#      "ただいまcronのテスト中"
+#      "<!here>: ただいまcronのテスト中。(＿\"＿)"
 #  , null, true, 'Asia/Tokyo'
