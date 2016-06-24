@@ -16,10 +16,10 @@ module.exports = (robot) ->
     nweek = Math.floor(msec/1000/60/60/24/7)
     assignment =
       (if nweek % 2 == 0 then "論文調査報告と" else "") +
-      "就活報告"
+      "(就活中の人は)就活報告"
     robot.send { room: "#general" },
       "@channel: おはよーございます!\n" +
-      "今日は#{assignment}の〆切日デスヨ。提出お忘れなく!"
+      "今日は, #{assignment}の〆切日デスヨ。提出お忘れなく!"
   , null, true, 'Asia/Tokyo'
 
   new cron '0 0 18 * * 2', () =>
