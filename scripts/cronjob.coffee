@@ -9,6 +9,9 @@ cron = require('cron').CronJob
 
 
 module.exports = (robot) ->
+
+# commented out for the summer vacation
+###
   new cron '0 30 9 * * 6', () =>
 
     d1 = new Date "2016-04-06 00:00:00 +0900"
@@ -27,6 +30,7 @@ module.exports = (robot) ->
       "<!channel>: 明日は輪講デスヨ。ご準備お願いシマス。(＿\"＿) ペコリ\n" +
       "欠席の人はご連絡お願いシマス。"
   , null, true, 'Asia/Tokyo'
+###
 
 #  new cron '0 3 19 * * 2', () =>
 #    robot.send { room: "#slack-sandbox" },
