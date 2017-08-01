@@ -10,6 +10,7 @@ cron = require('cron').CronJob
 
 module.exports = (robot) ->
 
+  ###
   new cron '0 30 9 * * 6', () =>
 
     d1 = new Date "2017-04-08 00:00:00 +0900"
@@ -22,6 +23,7 @@ module.exports = (robot) ->
       "@yy @shimada: おはよーございます!\n" +
       "今日は, #{assignment}の〆切日デスヨ。提出お忘れなく!"
   , null, true, 'Asia/Tokyo'
+  ###
 
   new cron '0 25 18 * * 2', () =>
     robot.send { room: "#seminar-all" },
