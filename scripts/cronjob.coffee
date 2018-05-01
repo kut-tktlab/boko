@@ -25,7 +25,7 @@ module.exports = (robot) ->
   , null, true, 'Asia/Tokyo'
   ###
 
-  new cron '0 12 19 * * 2', () =>
+  new cron '0 5 18 * * 2', () =>
     robot.send { room: "#seminar-all" },
       "<!channel>: 明日は水曜勉強会デスヨ。お集まり願いマス。" +
       "(＿\x0c\"\x0c＿) ペコリ\n" +
