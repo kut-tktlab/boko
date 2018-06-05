@@ -28,8 +28,10 @@ module.exports = (robot) ->
   new cron '0 5 18 * * 2', () =>
     robot.send { room: "#seminar-all" },
       "<!channel>: 明日は水曜勉強会デスヨ。お集まり願いマス。" +
-      "(＿\x0c\"\x0c＿) ペコリ\n" +
-      "欠席の人はご連絡お願いシマス。"
+      "(＿\"＿\xc2\xad) ペコリ\n" +
+      "欠席の人はご連絡お願いシマス。\n" +
+      "Tomorrow we will have the weekly seminar.\n" +
+      "Let's meet up tomorrow."
   , null, true, 'Asia/Tokyo'
 
 #  new cron '0 3 19 * * 2', () =>
